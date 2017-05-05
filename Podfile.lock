@@ -3,7 +3,7 @@ PODS:
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
-  - CryptoSwift (0.6.8)
+  - CryptoSwift (0.6.9)
   - ObjectMapper (2.2.6)
   - SnapKit (3.2.0)
 
@@ -17,10 +17,10 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
-  CryptoSwift: f21ea03ed3a94e79d241648ce26652cd4810508a
-  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
+  ObjectMapper: '042708195cc46c20871cbcbec0453826398273fd'
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
 PODFILE CHECKSUM: fa038daebe196a1adde29ceaf2f52e9d1b8359fe
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

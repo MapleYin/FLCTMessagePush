@@ -7,9 +7,13 @@
 //
 
 
-
-func listData(then: @escaping(ListResponseModel<MessageModel>?)->Void) {
+class MessageServer:BaseNetwork{
+    func listData(then: @escaping(ListResponseModel<MessageModel>?)->Void) {
+    }
+    
+    func sendPushToken(_ token:String, then: @escaping(BaseResponseModel?)->Void) {
+    }
 }
 
-func sendPushToken(_ token:String, then: @escaping(BaseResponseModel?)->Void) {
-}
+
+
