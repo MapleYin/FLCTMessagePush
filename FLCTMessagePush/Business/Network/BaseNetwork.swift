@@ -11,21 +11,30 @@ import ObjectMapper
 import AlamofireObjectMapper
 import CryptoSwift
 
+struct encoding:ParameterEncoding {
+    
+    func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest{
+        var urlRequest = try urlRequest.asURLRequest()
+        
+        guard let parameters = parameters else { return urlRequest }
+
+        if let data = try? JSONSerialization.data(withJSONObject: parameters){
+            let aes = try AES(key: "", iv: "")
+
+            let ciphertext = try aes.encrypt(data)
+            urlRequest.httpBody = ciphertext.toHexString().data(using: String.Encoding.utf8)
+        }
+        
+        return urlRequest
+    }
+}
 
 class BaseNetwork{
     
-    typealias resultCallback<T> = (_ result:T?,_ error:Error?)->Void
+    typealias resultCallback<T:Mappable> = (_ result:T?,_ error:Error?)->()
     
-    internal func post<T>(_ url:String,parameters:[String:Any]?, then:@escaping resultCallback<T>)where T:BaseResponseModel{
-        self.request(url, method: .post, parameters: parameters, then: then)
-    }
-    
-    internal func get<T>(_ url:String,parameters:[String:Any]?, then:@escaping resultCallback<T>)where T:BaseResponseModel{
-        self.request(url, method: .get, parameters: parameters, then: then)
-    }
-    
-    internal func request<T>(_ url:String,method:HTTPMethod,parameters:[String:Any]?, then:@escaping resultCallback<T>)where T:BaseResponseModel{
-        let requset = Alamofire.request(url, method: method, parameters: parameters, encoding:URLEncoding.default, headers: nil)
+    internal func request<T:BaseMappable>(_ url:String, method:HTTPMethod = .get,parameters:[String:Any]? = nil, headers:HTTPHeaders? = nil, then:@escaping resultCallback<T>){
+        let requset = Alamofire.request(url, method: method, parameters: parameters, encoding:URLEncoding.default, headers: headers)
         requset.responseObject { (response:DataResponse<T>) in
             if let error = response.error{
                 then(nil,error)

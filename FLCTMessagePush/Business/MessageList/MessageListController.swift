@@ -41,7 +41,7 @@ class MessageListController: BaseTableViewController {
     }
     
     func loadData() {
-        MessageServer.listData { (result) in
+        MessageServer.shared.listData { (result) in
             if let list = result?.data{
                 self.dataList = list;
                 self.tableView.reloadData()
@@ -52,7 +52,7 @@ class MessageListController: BaseTableViewController {
     // MARK: - Pull to Fetch
     
     func refresh(_ sender:UIRefreshControl) {
-        MessageServer.listData { (result) in
+        MessageServer.shared.listData { (result) in
             if let list = result?.data{
                 self.dataList = list;
                 self.tableView.reloadData()

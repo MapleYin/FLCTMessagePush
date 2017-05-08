@@ -28,7 +28,7 @@ extension AppDelegate{
         let token = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         let storedToken:String? = Cache.UserDefault.readData(kDeviceToken)
         if storedToken == nil||token != storedToken {
-            MessageServer.sendPushToken(token){(result) in
+            MessageServer.shared.sendPushToken(token){(result) in
                 if result?.code == 0{
                     _ = Cache.UserDefault.saveData(token, forKey: kDeviceToken)
                 }else{
