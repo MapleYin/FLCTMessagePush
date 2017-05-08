@@ -9,6 +9,9 @@
 
 class MessageServer:BaseNetwork{
     func listData(then: @escaping(ListResponseModel<MessageModel>?)->Void) {
+        self.get(MainUrl.list.url, parameters: nil) { (result:ListResponseModel<MessageModel>, error) in
+            
+        }
     }
     
     func sendPushToken(_ token:String, then: @escaping(BaseResponseModel?)->Void) {

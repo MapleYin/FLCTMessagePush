@@ -13,11 +13,23 @@ import CryptoSwift
 
 
 class BaseNetwork{
-    internal func get<T:BaseMappable>(_ url:String, params:[String:Any]?, then:@escaping (_ result:T?,_ error:Error?)->Void){
-        let requset = Alamofire.request(url, method: .get, parameters: params, encoding:URLEncoding.default, headers: nil)
-        
+    
+    typealias resultCallback<T> = (_ result:T?,_ error:Error?)->Void
+    
+    internal func post<T>(_ url:String,parameters:[String:Any]?, then:@escaping resultCallback<T>)where T:BaseResponseModel{
+        self.request(url, method: .post, parameters: parameters, then: then)
+    }
+    
+    internal func get<T>(_ url:String,parameters:[String:Any]?, then:@escaping resultCallback<T>)where T:BaseResponseModel{
+        self.request(url, method: .get, parameters: parameters, then: then)
+    }
+    
+    internal func request<T>(_ url:String,method:HTTPMethod,parameters:[String:Any]?, then:@escaping resultCallback<T>)where T:BaseResponseModel{
+        let requset = Alamofire.request(url, method: method, parameters: parameters, encoding:URLEncoding.default, headers: nil)
         requset.responseObject { (response:DataResponse<T>) in
             if let error = response.error{
+                then(nil,error)
+            }else if let error = response.result.error{
                 then(nil,error)
             }else{
                 then(response.result.value,nil)
@@ -25,3 +37,4 @@ class BaseNetwork{
         }
     }
 }
+                                                                                                                                                                                                                        
