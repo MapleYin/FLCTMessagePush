@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class NormalResponseModel<T:Mappable>: BaseResponseModel {
+class NormalResponseModel<T>: BaseResponseModel {
     var data : T?
     required init?(map: Map){
         super.init(map:map);

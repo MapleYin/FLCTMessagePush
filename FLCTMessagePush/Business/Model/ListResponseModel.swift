@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class ListResponseModel<T:Mappable>: BaseResponseModel {
+class ListResponseModel<T>: BaseResponseModel {
     var data : [T]?
     required init?(map: Map){
         super.init(map:map);

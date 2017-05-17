@@ -10,6 +10,8 @@ import Foundation
 
 // Mark: - Message
 
+private let isTest = true;
+
 protocol AppUrl{
     var host:String{get}
     var rawValue:String{get}
@@ -23,9 +25,13 @@ extension AppUrl{
 
 enum MainUrl:String,AppUrl{
     var host:String{
+        if isTest {
+            return "http://localhost:3003/api"
+        }
         return "http://demo.maple.im"
     }
-    
-    case list = "/message/read.php"
+    case authorize = "/authorize"
+    case register = "/register"
+    case message = "/message"
     case pushtoken = "/message/token.php"
 }
