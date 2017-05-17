@@ -22,6 +22,10 @@ class MessageListController: BaseTableViewController {
         
         self.title = "信息";
         
+        UserServer.shared.login(username: "", password: "") { (result) in
+            
+        }
+        
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "btn_setting").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(setting));
         
         self.tableView.register(MessageListCell.self, forCellReuseIdentifier: NSStringFromClass(MessageListCell.self))
