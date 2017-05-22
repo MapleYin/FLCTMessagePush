@@ -17,12 +17,17 @@ class UserServer : BaseNetwork {
     
     func login(username:String,password:String,then:@escaping(NormalResponseModel<String>?)->Void) {
         let params = [
-            "username":"maple1058",
-            "password":"maple1105",
+            "username":username,
+            "password":password,
             ]
         
         self.request(MainUrl.authorize.url, method: .post, parameters: params) { (result:NormalResponseModel<String>?, error:Error?) in
-            print("\(result?.data)")
+            if let error = error {
+                print(error)
+                then(nil)
+            } else {
+                then(result)
+            }
         }
     }
 }

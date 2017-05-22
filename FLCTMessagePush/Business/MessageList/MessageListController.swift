@@ -22,9 +22,7 @@ class MessageListController: BaseTableViewController {
         
         self.title = "信息";
         
-        UserServer.shared.login(username: "", password: "") { (result) in
-            
-        }
+        
         
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "btn_setting").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(setting));
         
@@ -56,13 +54,16 @@ class MessageListController: BaseTableViewController {
     // MARK: - Pull to Fetch
     
     func refresh(_ sender:UIRefreshControl) {
-        MessageServer.shared.listData { (result) in
-            if let list = result?.data{
-                self.dataList = list;
-                self.tableView.reloadData()
-            }
-            sender.endRefreshing()
+        sender.endRefreshing()
+        UserServer.shared.login(username: "", password: "") { (result) in
         }
+//        MessageServer.shared.listData { (result) in
+//            if let list = result?.data{
+//                self.dataList = list;
+//                self.tableView.reloadData()
+//            }
+//            sender.endRefreshing()
+//        }
     }
     
     

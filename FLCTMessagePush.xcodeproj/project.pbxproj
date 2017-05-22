@@ -39,6 +39,7 @@
 		66F61E231EC03AB400993053 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F61E221EC03AB400993053 /* UserModel.swift */; };
 		F5508DB61EBB564B00CD00FC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DB51EBB564B00CD00FC /* LoginController.swift */; };
 		F5508DB81EBB875500CD00FC /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DB71EBB875500CD00FC /* BaseNetwork.swift */; };
+		F5508DBD1ECDE86600CD00FC /* Encrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DBC1ECDE86600CD00FC /* Encrypted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		E68C7F38C20F2BBEA004F836 /* Pods-FLCTMessagePush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.release.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.release.xcconfig"; sourceTree = "<group>"; };
 		F5508DB51EBB564B00CD00FC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5508DB71EBB875500CD00FC /* BaseNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		F5508DBC1ECDE86600CD00FC /* Encrypted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypted.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				6683C0C71E8B902300D5F809 /* MessageList */,
 				669CDFCA1EBAEB5F00B0743F /* PhoneCallList */,
 				66D06B681E8FBCFB00909693 /* Setting */,
+				F5508DBB1ECDE7D400CD00FC /* Util */,
 				F5508DB41EBB562000CD00FC /* LoginController */,
 			);
 			path = Business;
@@ -288,6 +291,14 @@
 				F5508DB51EBB564B00CD00FC /* LoginController.swift */,
 			);
 			path = LoginController;
+			sourceTree = "<group>";
+		};
+		F5508DBB1ECDE7D400CD00FC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F5508DBC1ECDE86600CD00FC /* Encrypted.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5508DBD1ECDE86600CD00FC /* Encrypted.swift in Sources */,
 				6683C0C91E8B906E00D5F809 /* MessageListController.swift in Sources */,
 				66D06B611E8F580900909693 /* Cache.swift in Sources */,
 				6683C0E21E8BBA6A00D5F809 /* BaseResponseModel.swift in Sources */,
