@@ -12,5 +12,10 @@
 		<string>content-filter-provider</string>
 		<string>packet-tunnel-provider</string>
 	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)im.maple.FLCTSMSNotice</string>
+		<string>$(AppIdentifierPrefix)im.maple.*</string>
+	</array>
 </dict>
 </plist>
