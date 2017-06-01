@@ -26,7 +26,7 @@ class UserServer : BaseNetwork {
         }
     }
     
-    func login(username:String,password:String,then:@escaping(NormalResponseModel<String>?)->Void) {
+    func login(username:String,password:String,then:@escaping resultCallback<String>) {
         let params = [
             "username":username,
             "password":password,
@@ -34,9 +34,12 @@ class UserServer : BaseNetwork {
         
         self.request(MainUrl.authorize.url, method: .post, parameters: params) { (result:NormalResponseModel<String>?, error:Error?) in
             if let result = result {
-                then(result)
+                if let token = result.data {
+                    self.globelHeader["authorization"] = "Bearer " + token
+                }
+                then(result.data,nil)
             } else {
-                then(nil)
+                then(nil,error)
             }
         }
     }

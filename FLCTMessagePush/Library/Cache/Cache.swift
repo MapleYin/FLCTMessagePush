@@ -14,6 +14,7 @@ enum Cache{
     case File
     case Archive
     
+    @discardableResult
     func saveData(_ data:Any? ,forKey key:String) -> Bool {
         switch self {
         case .UserDefault:

@@ -15,7 +15,7 @@ class SettingViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "设置"
+        self.title = NSLocalizedString("setting", comment: "setting title")
         
         createSettingItems()
 
@@ -30,6 +30,7 @@ class SettingViewController: BaseTableViewController {
     }
     
     func createSettingItems(){
+        self.dataList.append(SettingModel("点击登录"))
         self.dataList.append(SettingModel("推送设置"))
         self.dataList.append(SettingModel("本地推送"))
     }
@@ -54,8 +55,13 @@ class SettingViewController: BaseTableViewController {
     
     // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = dataList[indexPath.row]
-        model.onSelected()
+        switch indexPath.row {
+        case 0:
+            let loginVC = UINavigationController(rootViewController: LoginController())
+            self.navigationController?.present(loginVC, animated: true, completion: nil)
+        default:
+            break
+        }
     }
 
 }

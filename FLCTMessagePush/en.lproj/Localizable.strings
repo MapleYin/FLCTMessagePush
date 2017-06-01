@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  FLCTMessagePush
+
+  Created by Maple Yin on 2017/5/25.
+  Copyright © 2017年 Maple. All rights reserved.
+*/
+
+
+"login" = "Login";
+"setting" = "Setting";
