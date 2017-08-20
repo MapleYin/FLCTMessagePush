@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: BaseViewController {
+class LoginController: BaseViewController,UITextFieldDelegate {
     
     let conteinerView = UIView()
     
@@ -35,6 +35,8 @@ class LoginController: BaseViewController {
         
         // username
         usernameTextField.borderStyle = .roundedRect
+        usernameTextField.delegate = self
+//        usernameTextField.textContentType = 
         usernameTextField.placeholder = "账号"
         conteinerView.addSubview(usernameTextField)
         
@@ -42,6 +44,7 @@ class LoginController: BaseViewController {
         // password
         passwordTextField.isSecureTextEntry = true;
         passwordTextField.borderStyle = .roundedRect
+        passwordTextField.delegate = self
         passwordTextField.placeholder = "密码"
         conteinerView.addSubview(passwordTextField)
         
@@ -86,12 +89,24 @@ class LoginController: BaseViewController {
 
     
     @objc private func login(_ btn:UIButton) {
-        UserServer.shared.login(username: "maple1058", password: "maple1105") { (token, error) in
-
+        
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        
+        UserServer.shared.login(username: username!, password: password!) { (isLogin, error) in
+            
         }
     }
     
     @objc private func close() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK:- UITextFieldDelegate
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        return true
+    }
+    
 }
