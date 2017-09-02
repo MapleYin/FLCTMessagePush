@@ -28,7 +28,6 @@
 		6683C0EF1E8CC84000D5F809 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6683C0EE1E8CC84000D5F809 /* MapKit.framework */; };
 		669CDFC91EBAD3EA00B0743F /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CDFC81EBAD3EA00B0743F /* BaseTabBarController.swift */; };
 		669CDFCC1EBAEBAA00B0743F /* PhoneCallListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CDFCB1EBAEBAA00B0743F /* PhoneCallListController.swift */; };
-		669CDFCE1EBAF55500B0743F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669CDFCD1EBAF55500B0743F /* Assets.xcassets */; };
 		66D06B611E8F580900909693 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B601E8F580900909693 /* Cache.swift */; };
 		66D06B671E8FB7C600909693 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B661E8FB7C600909693 /* BaseTableViewController.swift */; };
 		66D06B6A1E8FBD2F00909693 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B691E8FBD2F00909693 /* SettingViewController.swift */; };
@@ -37,6 +36,8 @@
 		66D06B751E90B96500909693 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B741E90B96500909693 /* SettingModel.swift */; };
 		66F61E211EC038C800993053 /* UserServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F61E201EC038C800993053 /* UserServer.swift */; };
 		66F61E231EC03AB400993053 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F61E221EC03AB400993053 /* UserModel.swift */; };
+		F509B9AE1F5A45780032681E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509B9AD1F5A45780032681E /* LoginViewController.swift */; };
+		F509B9B01F5A8DC60032681E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F509B9AF1F5A8DC60032681E /* Assets.xcassets */; };
 		F5508DB61EBB564B00CD00FC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DB51EBB564B00CD00FC /* LoginController.swift */; };
 		F5508DB81EBB875500CD00FC /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DB71EBB875500CD00FC /* BaseNetwork.swift */; };
 		F5508DBD1ECDE86600CD00FC /* Encrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DBC1ECDE86600CD00FC /* Encrypted.swift */; };
@@ -69,7 +70,6 @@
 		6683C0EE1E8CC84000D5F809 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		669CDFC81EBAD3EA00B0743F /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		669CDFCB1EBAEBAA00B0743F /* PhoneCallListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCallListController.swift; sourceTree = "<group>"; };
-		669CDFCD1EBAF55500B0743F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D06B601E8F580900909693 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		66D06B661E8FB7C600909693 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		66D06B691E8FBD2F00909693 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +81,8 @@
 		918E6F3CB4CAEE2F15B00B9F /* Pods_FLCTMessagePush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLCTMessagePush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B819CEA6B55D698F39836F30 /* Pods-FLCTMessagePush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.debug.xcconfig"; sourceTree = "<group>"; };
 		E68C7F38C20F2BBEA004F836 /* Pods-FLCTMessagePush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.release.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.release.xcconfig"; sourceTree = "<group>"; };
+		F509B9AD1F5A45780032681E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F509B9AF1F5A8DC60032681E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5508DB51EBB564B00CD00FC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5508DB71EBB875500CD00FC /* BaseNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		F5508DBC1ECDE86600CD00FC /* Encrypted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrypted.swift; sourceTree = "<group>"; };
@@ -149,7 +151,7 @@
 				6683C0BE1E8B8E6A00D5F809 /* Business */,
 				6683C0CF1E8B9B6E00D5F809 /* Library */,
 				6683C0B21E8B87EE00D5F809 /* LaunchScreen.storyboard */,
-				669CDFCD1EBAF55500B0743F /* Assets.xcassets */,
+				F509B9AF1F5A8DC60032681E /* Assets.xcassets */,
 				6683C0BB1E8B898B00D5F809 /* FLCTMessagePush.entitlements */,
 				6683C0B51E8B87EE00D5F809 /* Info.plist */,
 				F5508DC21ED7247600CD00FC /* Localizable.strings */,
@@ -166,6 +168,7 @@
 				6683C0C21E8B8F6900D5F809 /* RootController */,
 				6683C0C11E8B8F6900D5F809 /* BaseController */,
 				6683C0C71E8B902300D5F809 /* MessageList */,
+				F509B9AC1F5A453D0032681E /* Login */,
 				669CDFCA1EBAEB5F00B0743F /* PhoneCallList */,
 				66D06B681E8FBCFB00909693 /* Setting */,
 				F5508DBB1ECDE7D400CD00FC /* Util */,
@@ -297,6 +300,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F509B9AC1F5A453D0032681E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F509B9AD1F5A45780032681E /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F5508DB41EBB562000CD00FC /* LoginController */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,8 +422,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669CDFCE1EBAF55500B0743F /* Assets.xcassets in Resources */,
 				F5508DC01ED7247600CD00FC /* Localizable.strings in Resources */,
+				F509B9B01F5A8DC60032681E /* Assets.xcassets in Resources */,
 				6683C0B41E8B87EE00D5F809 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +443,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9F584F9F64A96CD9DF207668 /* [CP] Embed Pods Frameworks */ = {
@@ -485,6 +496,7 @@
 				6683C0D91E8BAD6100D5F809 /* MessageServer.swift in Sources */,
 				6683C0ED1E8CC4F600D5F809 /* Date+Ex.swift in Sources */,
 				6683C0CE1E8B927800D5F809 /* AppDelegate+Notification.swift in Sources */,
+				F509B9AE1F5A45780032681E /* LoginViewController.swift in Sources */,
 				669CDFCC1EBAEBAA00B0743F /* PhoneCallListController.swift in Sources */,
 				66D06B731E90B93900909693 /* SettingViewCell.swift in Sources */,
 				F5508DB61EBB564B00CD00FC /* LoginController.swift in Sources */,
