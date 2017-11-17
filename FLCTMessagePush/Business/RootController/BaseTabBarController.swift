@@ -27,7 +27,6 @@ class BaseTabBarController: UITabBarController {
         
         self.viewControllers = tabBarViewControllers;
         
-        
     }
     
     private func addViewController(_ viewController:UIViewController, title:String, image:UIImage, selectedImage:UIImage)->UIViewController{
@@ -36,4 +35,5 @@ class BaseTabBarController: UITabBarController {
         viewController.tabBarItem.selectedImage = image;
         return NavigationController(rootViewController: viewController);
     }
+
 }

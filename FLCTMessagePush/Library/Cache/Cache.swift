@@ -58,8 +58,8 @@ extension Cache{
 
 extension Cache{
     fileprivate func saveDataToUserDefault(_ data:Any?, forKey key:String) -> Bool {
-        if (data != nil), let formatData = dataFormat(data!){
-            UserDefaults.standard.set(formatData, forKey: key)
+        if data != nil{
+            UserDefaults.standard.set(data, forKey: key)
             return true
         }else{
             return false
@@ -108,11 +108,21 @@ extension Cache{
 extension Cache{
     fileprivate func archiveDataToFile(_ data:Any?, forKey key:String) -> Bool{
         if (data != nil),canArchive(data!){
-            return NSKeyedArchiver.archiveRootObject(data!, toFile: "")
+            if let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first {
+                let finalPath = path.appending("/multi.\(key)")
+                return NSKeyedArchiver.archiveRootObject(data!, toFile: finalPath)
+            } else {
+                return false
+            }
         }
         return false
     }
     fileprivate func unarchiveDateFromFile<T>(forKey key:String) -> T?{
-        return NSKeyedUnarchiver.unarchiveObject(withFile: "") as? T
+        if let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first {
+            let finalPath = path.appending("/multi.\(key)")
+            return NSKeyedUnarchiver.unarchiveObject(withFile: finalPath) as? T
+        } else {
+            return nil
+        }
     }
 }

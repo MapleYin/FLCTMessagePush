@@ -11,6 +11,14 @@ import UIKit
 class UserManager: NSObject {
     static let shared = UserManager()
     
+    var isLogin:Bool {
+        return token != nil
+    }
+    
+    var token:String? = {
+        return Cache.UserDefault.readData("token")
+    }()
+    
     lazy var currentUser:UserModel? = {
         return Cache.Archive.readData("userInfo")
     }()

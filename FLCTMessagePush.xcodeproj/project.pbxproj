@@ -10,6 +10,8 @@
 		01A7B050CFB2586656982896 /* Pods_FLCTMessagePush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918E6F3CB4CAEE2F15B00B9F /* Pods_FLCTMessagePush.framework */; };
 		6654374A1E96192E00C77F70 /* PushSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665437491E96192E00C77F70 /* PushSettingController.swift */; };
 		667490A01E9E208900B23B9F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6674909F1E9E208900B23B9F /* NetworkExtension.framework */; };
+		667A80A51F5BAA50008AA031 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667A80A41F5BAA50008AA031 /* UIColor+Ex.swift */; };
+		667A80A71F5BB4E0008AA031 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667A80A61F5BB4E0008AA031 /* String+Ex.swift */; };
 		6683C0B41E8B87EE00D5F809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6683C0B21E8B87EE00D5F809 /* LaunchScreen.storyboard */; };
 		6683C0C41E8B8FBE00D5F809 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683C0C31E8B8FBE00D5F809 /* NavigationController.swift */; };
 		6683C0C61E8B900800D5F809 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683C0C51E8B900800D5F809 /* BaseViewController.swift */; };
@@ -36,7 +38,6 @@
 		66D06B751E90B96500909693 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D06B741E90B96500909693 /* SettingModel.swift */; };
 		66F61E211EC038C800993053 /* UserServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F61E201EC038C800993053 /* UserServer.swift */; };
 		66F61E231EC03AB400993053 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F61E221EC03AB400993053 /* UserModel.swift */; };
-		F509B9AE1F5A45780032681E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509B9AD1F5A45780032681E /* LoginViewController.swift */; };
 		F509B9B01F5A8DC60032681E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F509B9AF1F5A8DC60032681E /* Assets.xcassets */; };
 		F5508DB61EBB564B00CD00FC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DB51EBB564B00CD00FC /* LoginController.swift */; };
 		F5508DB81EBB875500CD00FC /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5508DB71EBB875500CD00FC /* BaseNetwork.swift */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		665437491E96192E00C77F70 /* PushSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushSettingController.swift; sourceTree = "<group>"; };
 		6674909F1E9E208900B23B9F /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		667A80A41F5BAA50008AA031 /* UIColor+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		667A80A61F5BB4E0008AA031 /* String+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		6683C0A61E8B87EE00D5F809 /* FLCTMessagePush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLCTMessagePush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6683C0B31E8B87EE00D5F809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6683C0B51E8B87EE00D5F809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		918E6F3CB4CAEE2F15B00B9F /* Pods_FLCTMessagePush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLCTMessagePush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B819CEA6B55D698F39836F30 /* Pods-FLCTMessagePush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.debug.xcconfig"; sourceTree = "<group>"; };
 		E68C7F38C20F2BBEA004F836 /* Pods-FLCTMessagePush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.release.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.release.xcconfig"; sourceTree = "<group>"; };
-		F509B9AD1F5A45780032681E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F509B9AF1F5A8DC60032681E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5508DB51EBB564B00CD00FC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F5508DB71EBB875500CD00FC /* BaseNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
@@ -260,6 +262,8 @@
 			children = (
 				6683C0EC1E8CC4F600D5F809 /* Date+Ex.swift */,
 				F5508DCC1EDAB6C100CD00FC /* Dictionary+Ex.swift */,
+				667A80A41F5BAA50008AA031 /* UIColor+Ex.swift */,
+				667A80A61F5BB4E0008AA031 /* String+Ex.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -303,7 +307,6 @@
 		F509B9AC1F5A453D0032681E /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				F509B9AD1F5A45780032681E /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -437,13 +440,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FLCTMessagePush-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9F584F9F64A96CD9DF207668 /* [CP] Embed Pods Frameworks */ = {
@@ -452,9 +458,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -492,11 +511,12 @@
 				66D06B671E8FB7C600909693 /* BaseTableViewController.swift in Sources */,
 				F5508DCB1ED7A7EA00CD00FC /* UserManager.swift in Sources */,
 				669CDFC91EBAD3EA00B0743F /* BaseTabBarController.swift in Sources */,
+				667A80A71F5BB4E0008AA031 /* String+Ex.swift in Sources */,
 				66D06B6A1E8FBD2F00909693 /* SettingViewController.swift in Sources */,
+				667A80A51F5BAA50008AA031 /* UIColor+Ex.swift in Sources */,
 				6683C0D91E8BAD6100D5F809 /* MessageServer.swift in Sources */,
 				6683C0ED1E8CC4F600D5F809 /* Date+Ex.swift in Sources */,
 				6683C0CE1E8B927800D5F809 /* AppDelegate+Notification.swift in Sources */,
-				F509B9AE1F5A45780032681E /* LoginViewController.swift in Sources */,
 				669CDFCC1EBAEBAA00B0743F /* PhoneCallListController.swift in Sources */,
 				66D06B731E90B93900909693 /* SettingViewCell.swift in Sources */,
 				F5508DB61EBB564B00CD00FC /* LoginController.swift in Sources */,
@@ -583,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -627,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -649,7 +669,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -667,7 +687,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

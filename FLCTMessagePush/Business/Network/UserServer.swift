@@ -34,11 +34,16 @@ class UserServer : BaseNetwork {
         
         self.request(MainUrl.authorize.url, method: .post, parameters: params) { (result:NormalResponseModel<String>?, error:Error?) in
             if let result = result {
-                if let token = result.data {
-                    Cache.UserDefault.saveData(token, forKey: "token")
-                    self.addAuthorization(token)
+                if result.code == 0 {
+                    if let token = result.data {
+                        Cache.UserDefault.saveData(token, forKey: "token")
+                        self.addAuthorization(token)
+                    }
+                    then(true,nil)
+                } else {
+                    then(false,nil)
                 }
-                then(true,nil)
+                
             } else {
                 then(false,error)
             }

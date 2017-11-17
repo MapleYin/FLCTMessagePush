@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = BaseTabBarController();
-            //NavigationController(rootViewController:MessageListController());
-        self.window?.makeKeyAndVisible();
+        self.window?.rootViewController = BaseTabBarController()
+        self.window?.makeKeyAndVisible()
+        
+        if !UserManager.shared.isLogin {
+            let tabBarVC = self.window?.rootViewController as! BaseTabBarController
+            tabBarVC .present(LoginController(), animated: false, completion: nil)
+        }
         
         setUpNotification();
         

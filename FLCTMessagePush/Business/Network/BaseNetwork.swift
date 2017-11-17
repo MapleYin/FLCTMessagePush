@@ -29,7 +29,7 @@ struct encoding:ParameterEncoding {
 
 
 class BaseNetwork{
-    typealias resultCallback<T:Mappable> = (_ result:T?,_ error:Error?)->()
+    typealias resultCallback<T> = (_ result:T?,_ error:Error?)->()
     static var globelHeader:HTTPHeaders = [:];
     
     init() {

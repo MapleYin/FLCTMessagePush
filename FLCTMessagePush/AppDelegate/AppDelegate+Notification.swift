@@ -26,6 +26,7 @@ extension AppDelegate{
     
     func onReciveDeviceToken(deviceToken:Data) {
         let token = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print("token:\(token)")
         let storedToken:String? = Cache.UserDefault.readData(kDeviceToken)
         if storedToken == nil||token != storedToken {
             UserServer.shared.sendPushToken(token){(isSuccess,error) in

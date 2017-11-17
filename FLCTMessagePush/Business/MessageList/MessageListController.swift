@@ -53,7 +53,7 @@ class MessageListController: BaseTableViewController {
     
     // MARK: - Pull to Fetch
     
-    func refresh(_ sender:UIRefreshControl) {
+    @objc func refresh(_ sender:UIRefreshControl) {
         MessageServer.shared.listData { (list,error) in
             if let list = list{
                 self.dataList = list;
