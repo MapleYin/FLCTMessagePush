@@ -7,6 +7,8 @@ target 'FLCTMessagePush' do
   
   # ignore all warnings from all pods
   inhibit_all_warnings!
+  
+  pod 'STOrigin', :path => '../STOrigin'
 
   # Pods for FLCTMessagePush
   pod 'Alamofire', '~> 4.3.0'

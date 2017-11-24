@@ -13,6 +13,16 @@
 		667490A01E9E208900B23B9F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6674909F1E9E208900B23B9F /* NetworkExtension.framework */; };
 		6683C0B41E8B87EE00D5F809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6683C0B21E8B87EE00D5F809 /* LaunchScreen.storyboard */; };
 		6683C0EF1E8CC84000D5F809 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6683C0EE1E8CC84000D5F809 /* MapKit.framework */; };
+		F5091A641FBFC70900AA84F3 /* STMPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091A631FBFC70900AA84F3 /* STMPTabBarViewController.m */; };
+		F5091A9A1FC33B3300AA84F3 /* STMPMessageListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091A991FC33B3300AA84F3 /* STMPMessageListController.m */; };
+		F5091AA71FC4627200AA84F3 /* STMPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091AA61FC4627200AA84F3 /* STMPTableViewCell.m */; };
+		F5091AAA1FC4629400AA84F3 /* STMPMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091AA91FC4629400AA84F3 /* STMPMessageListCell.m */; };
+		F5091AAE1FC462D400AA84F3 /* STMPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091AAD1FC462D400AA84F3 /* STMPTableViewController.m */; };
+		F5091AB11FC462ED00AA84F3 /* STMPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091AB01FC462ED00AA84F3 /* STMPViewController.m */; };
+		F5091AB41FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091AB31FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.m */; };
+		F5091AB91FC5AF5A00AA84F3 /* STMPDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091AB81FC5AF5A00AA84F3 /* STMPDataManager.m */; };
+		F5091ABD1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091ABC1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m */; };
+		F5091AC01FC65CDA00AA84F3 /* STMPCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091ABF1FC65CDA00AA84F3 /* STMPCellViewModel.m */; };
 		F509B9B01F5A8DC60032681E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F509B9AF1F5A8DC60032681E /* Assets.xcassets */; };
 		F5508DC01ED7247600CD00FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5508DC21ED7247600CD00FC /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -30,6 +40,26 @@
 		918E6F3CB4CAEE2F15B00B9F /* Pods_FLCTMessagePush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLCTMessagePush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B819CEA6B55D698F39836F30 /* Pods-FLCTMessagePush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.debug.xcconfig"; sourceTree = "<group>"; };
 		E68C7F38C20F2BBEA004F836 /* Pods-FLCTMessagePush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLCTMessagePush.release.xcconfig"; path = "Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush.release.xcconfig"; sourceTree = "<group>"; };
+		F5091A621FBFC70900AA84F3 /* STMPTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPTabBarViewController.h; sourceTree = "<group>"; };
+		F5091A631FBFC70900AA84F3 /* STMPTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPTabBarViewController.m; sourceTree = "<group>"; };
+		F5091A981FC33B3300AA84F3 /* STMPMessageListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPMessageListController.h; sourceTree = "<group>"; };
+		F5091A991FC33B3300AA84F3 /* STMPMessageListController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = STMPMessageListController.m; sourceTree = "<group>"; };
+		F5091AA51FC4627200AA84F3 /* STMPTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPTableViewCell.h; sourceTree = "<group>"; };
+		F5091AA61FC4627200AA84F3 /* STMPTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPTableViewCell.m; sourceTree = "<group>"; };
+		F5091AA81FC4629400AA84F3 /* STMPMessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPMessageListCell.h; sourceTree = "<group>"; };
+		F5091AA91FC4629400AA84F3 /* STMPMessageListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPMessageListCell.m; sourceTree = "<group>"; };
+		F5091AAC1FC462D400AA84F3 /* STMPTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPTableViewController.h; sourceTree = "<group>"; };
+		F5091AAD1FC462D400AA84F3 /* STMPTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPTableViewController.m; sourceTree = "<group>"; };
+		F5091AAF1FC462ED00AA84F3 /* STMPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPViewController.h; sourceTree = "<group>"; };
+		F5091AB01FC462ED00AA84F3 /* STMPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPViewController.m; sourceTree = "<group>"; };
+		F5091AB21FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPMessageListCellViewModel.h; sourceTree = "<group>"; };
+		F5091AB31FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPMessageListCellViewModel.m; sourceTree = "<group>"; };
+		F5091AB71FC5AF5A00AA84F3 /* STMPDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPDataManager.h; sourceTree = "<group>"; };
+		F5091AB81FC5AF5A00AA84F3 /* STMPDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPDataManager.m; sourceTree = "<group>"; };
+		F5091ABB1FC5CD9B00AA84F3 /* STMPMessageListDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPMessageListDataManager.h; sourceTree = "<group>"; };
+		F5091ABC1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPMessageListDataManager.m; sourceTree = "<group>"; };
+		F5091ABE1FC65CDA00AA84F3 /* STMPCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPCellViewModel.h; sourceTree = "<group>"; };
+		F5091ABF1FC65CDA00AA84F3 /* STMPCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPCellViewModel.m; sourceTree = "<group>"; };
 		F509B9AF1F5A8DC60032681E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5508DC51ED7254900CD00FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F5508DC61ED7254900CD00FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -61,16 +91,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		664912791FBED6ED00A7F482 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				6649127F1FBEDA2500A7F482 /* Main */,
-				6649127E1FBED9F300A7F482 /* Module */,
-				6649127D1FBED95400A7F482 /* Component */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		6649127B1FBED73D00A7F482 /* OtherFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,43 +101,6 @@
 				664912761FBED00C00A7F482 /* main.m */,
 			);
 			path = OtherFile;
-			sourceTree = "<group>";
-		};
-		6649127D1FBED95400A7F482 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
-		6649127E1FBED9F300A7F482 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				664912811FBEDA3500A7F482 /* Message */,
-				664912801FBEDA2D00A7F482 /* Login */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		6649127F1FBEDA2500A7F482 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		664912801FBEDA2D00A7F482 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		664912811FBEDA3500A7F482 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Message;
 			sourceTree = "<group>";
 		};
 		6683C09D1E8B87EE00D5F809 = {
@@ -143,7 +126,7 @@
 			children = (
 				6649127C1FBED90300A7F482 /* FLCTMessagePush.entitlements */,
 				6683C0CA1E8B90BC00D5F809 /* AppDelegate */,
-				664912791FBED6ED00A7F482 /* App */,
+				F5D4BA561FBFC46A00A555D8 /* App */,
 				6649127B1FBED73D00A7F482 /* OtherFile */,
 			);
 			path = FLCTMessagePush;
@@ -165,6 +148,177 @@
 				E68C7F38C20F2BBEA004F836 /* Pods-FLCTMessagePush.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5091A571FBFC53400AA84F3 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				F5091A621FBFC70900AA84F3 /* STMPTabBarViewController.h */,
+				F5091A631FBFC70900AA84F3 /* STMPTabBarViewController.m */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		F5091A691FBFCA4100AA84F3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F5091A6A1FBFEB8300AA84F3 /* Uitil */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Uitil;
+			sourceTree = "<group>";
+		};
+		F5091A8B1FC333FB00AA84F3 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		F5091A8C1FC3340500AA84F3 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				F5091A8E1FC3342D00AA84F3 /* Detail */,
+				F5091A8D1FC3342100AA84F3 /* List */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		F5091A8D1FC3342100AA84F3 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F5091ABA1FC5CD7B00AA84F3 /* Manager */,
+				F5091AA21FC461BF00AA84F3 /* ViewModel */,
+				F5091AA11FC461B500AA84F3 /* View */,
+				F5091A981FC33B3300AA84F3 /* STMPMessageListController.h */,
+				F5091A991FC33B3300AA84F3 /* STMPMessageListController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		F5091A8E1FC3342D00AA84F3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F5091AA11FC461B500AA84F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AA81FC4629400AA84F3 /* STMPMessageListCell.h */,
+				F5091AA91FC4629400AA84F3 /* STMPMessageListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5091AA21FC461BF00AA84F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AB21FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.h */,
+				F5091AB31FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F5091AA31FC4625000AA84F3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AAB1FC462B400AA84F3 /* Controller */,
+				F5091AA41FC4625800AA84F3 /* Cell */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		F5091AA41FC4625800AA84F3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AA51FC4627200AA84F3 /* STMPTableViewCell.h */,
+				F5091AA61FC4627200AA84F3 /* STMPTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F5091AAB1FC462B400AA84F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AAC1FC462D400AA84F3 /* STMPTableViewController.h */,
+				F5091AAD1FC462D400AA84F3 /* STMPTableViewController.m */,
+				F5091AAF1FC462ED00AA84F3 /* STMPViewController.h */,
+				F5091AB01FC462ED00AA84F3 /* STMPViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5091AB51FC5ACE400AA84F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5091ABE1FC65CDA00AA84F3 /* STMPCellViewModel.h */,
+				F5091ABF1FC65CDA00AA84F3 /* STMPCellViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5091AB61FC5ACEB00AA84F3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AB71FC5AF5A00AA84F3 /* STMPDataManager.h */,
+				F5091AB81FC5AF5A00AA84F3 /* STMPDataManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F5091ABA1FC5CD7B00AA84F3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F5091ABB1FC5CD9B00AA84F3 /* STMPMessageListDataManager.h */,
+				F5091ABC1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F5D4BA561FBFC46A00A555D8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F5091A6A1FBFEB8300AA84F3 /* Uitil */,
+				F5D4BA591FBFC48E00A555D8 /* Module */,
+				F5D4BA581FBFC48600A555D8 /* Component */,
+				F5D4BA571FBFC47E00A555D8 /* Main */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F5D4BA571FBFC47E00A555D8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F5091A571FBFC53400AA84F3 /* TabbarController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F5D4BA581FBFC48600A555D8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F5091AB61FC5ACEB00AA84F3 /* Manager */,
+				F5091AB51FC5ACE400AA84F3 /* Model */,
+				F5091AA31FC4625000AA84F3 /* UIView */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F5D4BA591FBFC48E00A555D8 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F5091A8C1FC3340500AA84F3 /* Message */,
+				F5091A8B1FC333FB00AA84F3 /* Setting */,
+				F5091A691FBFCA4100AA84F3 /* Login */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +357,7 @@
 					6683C0A51E8B87EE00D5F809 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZEKMY4ZK97;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -293,12 +448,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/STOrigin/STOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,8 +485,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5091AA71FC4627200AA84F3 /* STMPTableViewCell.m in Sources */,
+				F5091ABD1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m in Sources */,
+				F5091AC01FC65CDA00AA84F3 /* STMPCellViewModel.m in Sources */,
+				F5091AAE1FC462D400AA84F3 /* STMPTableViewController.m in Sources */,
+				F5091AB11FC462ED00AA84F3 /* STMPViewController.m in Sources */,
+				F5091AB91FC5AF5A00AA84F3 /* STMPDataManager.m in Sources */,
+				F5091AAA1FC4629400AA84F3 /* STMPMessageListCell.m in Sources */,
+				F5091AB41FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.m in Sources */,
 				664912771FBED00C00A7F482 /* main.m in Sources */,
+				F5091A641FBFC70900AA84F3 /* STMPTabBarViewController.m in Sources */,
 				664912751FBECDF700A7F482 /* AppDelegate.m in Sources */,
+				F5091A9A1FC33B3300AA84F3 /* STMPMessageListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +578,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -459,6 +627,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -468,6 +637,7 @@
 			baseConfigurationReference = B819CEA6B55D698F39836F30 /* Pods-FLCTMessagePush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_ENTITLEMENTS = FLCTMessagePush/FLCTMessagePush.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -479,6 +649,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FLCTMessagePush/App/Uitil/FLCTMessagePush-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -488,6 +660,7 @@
 			baseConfigurationReference = E68C7F38C20F2BBEA004F836 /* Pods-FLCTMessagePush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_ENTITLEMENTS = FLCTMessagePush/FLCTMessagePush.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -499,6 +672,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FLCTMessagePush/App/Uitil/FLCTMessagePush-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
