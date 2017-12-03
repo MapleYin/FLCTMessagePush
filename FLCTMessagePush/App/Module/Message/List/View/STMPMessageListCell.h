@@ -7,10 +7,11 @@
 //
 
 #import "STMPTableViewCell.h"
-@class STMPMessageListCellViewModel;
+@class STMPMessageModel;
 
 @interface STMPMessageListCell : STMPTableViewCell
 
-- (void)setupWithModel:(STMPMessageListCellViewModel *)model;
+
+- (void)setupWithModel:(STMPMessageModel *)model;
 
 @end

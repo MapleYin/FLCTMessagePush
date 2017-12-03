@@ -24,6 +24,20 @@
 		F5091ABD1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091ABC1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m */; };
 		F5091AC01FC65CDA00AA84F3 /* STMPCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5091ABF1FC65CDA00AA84F3 /* STMPCellViewModel.m */; };
 		F509B9B01F5A8DC60032681E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F509B9AF1F5A8DC60032681E /* Assets.xcassets */; };
+		F528A38F1FCF0140004FEEC7 /* STMPLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A38E1FCF0140004FEEC7 /* STMPLoginController.m */; };
+		F528A3931FD0543D004FEEC7 /* STMPLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3921FD0543D004FEEC7 /* STMPLoginTextField.m */; };
+		F528A39A1FD06661004FEEC7 /* STMPLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3991FD06661004FEEC7 /* STMPLoginManager.m */; };
+		F528A3A51FD06B9A004FEEC7 /* NSString+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3A41FD06B9A004FEEC7 /* NSString+Crypto.m */; };
+		F528A3A81FD06C1C004FEEC7 /* NSDictionary+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3A71FD06C1C004FEEC7 /* NSDictionary+Crypto.m */; };
+		F528A3AC1FD236E2004FEEC7 /* STMPResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3AB1FD236E2004FEEC7 /* STMPResponseModel.m */; };
+		F528A3AF1FD2379A004FEEC7 /* NSData+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3AE1FD2379A004FEEC7 /* NSData+Crypto.m */; };
+		F528A3B31FD25C1E004FEEC7 /* STMPAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3B21FD25C1E004FEEC7 /* STMPAccountManager.m */; };
+		F528A3B71FD25C58004FEEC7 /* STMPAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3B61FD25C58004FEEC7 /* STMPAccountModel.m */; };
+		F528A3BA1FD25D38004FEEC7 /* STMPCommonDefined.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3B91FD25D38004FEEC7 /* STMPCommonDefined.m */; };
+		F528A3BE1FD26B82004FEEC7 /* STMPConstDefined.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3BD1FD26B82004FEEC7 /* STMPConstDefined.m */; };
+		F528A3CE1FD28D5A004FEEC7 /* STMPMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3CD1FD28D5A004FEEC7 /* STMPMessageModel.m */; };
+		F528A3D11FD29350004FEEC7 /* STMPListDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3D01FD29350004FEEC7 /* STMPListDataManager.m */; };
+		F528A3D71FD2CAD8004FEEC7 /* STNRequest+Init.m in Sources */ = {isa = PBXBuildFile; fileRef = F528A3D61FD2CAD8004FEEC7 /* STNRequest+Init.m */; };
 		F5508DC01ED7247600CD00FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5508DC21ED7247600CD00FC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +75,37 @@
 		F5091ABE1FC65CDA00AA84F3 /* STMPCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPCellViewModel.h; sourceTree = "<group>"; };
 		F5091ABF1FC65CDA00AA84F3 /* STMPCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPCellViewModel.m; sourceTree = "<group>"; };
 		F509B9AF1F5A8DC60032681E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F528A38D1FCF0140004FEEC7 /* STMPLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPLoginController.h; sourceTree = "<group>"; };
+		F528A38E1FCF0140004FEEC7 /* STMPLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPLoginController.m; sourceTree = "<group>"; };
+		F528A3911FD0543D004FEEC7 /* STMPLoginTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPLoginTextField.h; sourceTree = "<group>"; };
+		F528A3921FD0543D004FEEC7 /* STMPLoginTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPLoginTextField.m; sourceTree = "<group>"; };
+		F528A3981FD06661004FEEC7 /* STMPLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPLoginManager.h; sourceTree = "<group>"; };
+		F528A3991FD06661004FEEC7 /* STMPLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPLoginManager.m; sourceTree = "<group>"; };
+		F528A39B1FD0672F004FEEC7 /* FLCTMessagePush.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLCTMessagePush.pch; sourceTree = "<group>"; };
+		F528A3A21FD06AC1004FEEC7 /* STMPCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPCrypto.h; sourceTree = "<group>"; };
+		F528A3A31FD06B9A004FEEC7 /* NSString+Crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypto.h"; sourceTree = "<group>"; };
+		F528A3A41FD06B9A004FEEC7 /* NSString+Crypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypto.m"; sourceTree = "<group>"; };
+		F528A3A61FD06C1C004FEEC7 /* NSDictionary+Crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Crypto.h"; sourceTree = "<group>"; };
+		F528A3A71FD06C1C004FEEC7 /* NSDictionary+Crypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Crypto.m"; sourceTree = "<group>"; };
+		F528A3AA1FD236E2004FEEC7 /* STMPResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPResponseModel.h; sourceTree = "<group>"; };
+		F528A3AB1FD236E2004FEEC7 /* STMPResponseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPResponseModel.m; sourceTree = "<group>"; };
+		F528A3AD1FD2379A004FEEC7 /* NSData+Crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Crypto.h"; sourceTree = "<group>"; };
+		F528A3AE1FD2379A004FEEC7 /* NSData+Crypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Crypto.m"; sourceTree = "<group>"; };
+		F528A3B11FD25C1E004FEEC7 /* STMPAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPAccountManager.h; sourceTree = "<group>"; };
+		F528A3B21FD25C1E004FEEC7 /* STMPAccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPAccountManager.m; sourceTree = "<group>"; };
+		F528A3B51FD25C58004FEEC7 /* STMPAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPAccountModel.h; sourceTree = "<group>"; };
+		F528A3B61FD25C58004FEEC7 /* STMPAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPAccountModel.m; sourceTree = "<group>"; };
+		F528A3B91FD25D38004FEEC7 /* STMPCommonDefined.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPCommonDefined.m; sourceTree = "<group>"; };
+		F528A3BB1FD25D47004FEEC7 /* STMPCommonDefined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPCommonDefined.h; sourceTree = "<group>"; };
+		F528A3BC1FD26B82004FEEC7 /* STMPConstDefined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPConstDefined.h; sourceTree = "<group>"; };
+		F528A3BD1FD26B82004FEEC7 /* STMPConstDefined.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPConstDefined.m; sourceTree = "<group>"; };
+		F528A3BF1FD26D8A004FEEC7 /* STMPCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPCommon.h; sourceTree = "<group>"; };
+		F528A3CC1FD28D5A004FEEC7 /* STMPMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPMessageModel.h; sourceTree = "<group>"; };
+		F528A3CD1FD28D5A004FEEC7 /* STMPMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPMessageModel.m; sourceTree = "<group>"; };
+		F528A3CF1FD29350004FEEC7 /* STMPListDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMPListDataManager.h; sourceTree = "<group>"; };
+		F528A3D01FD29350004FEEC7 /* STMPListDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMPListDataManager.m; sourceTree = "<group>"; };
+		F528A3D51FD2CAD8004FEEC7 /* STNRequest+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STNRequest+Init.h"; sourceTree = "<group>"; };
+		F528A3D61FD2CAD8004FEEC7 /* STNRequest+Init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "STNRequest+Init.m"; sourceTree = "<group>"; };
 		F5508DC51ED7254900CD00FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F5508DC61ED7254900CD00FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F5508DC71ED7255D00CD00FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -99,6 +144,7 @@
 				6683C0B51E8B87EE00D5F809 /* FLCTMessagePush.plist */,
 				F5508DC21ED7247600CD00FC /* Localizable.strings */,
 				664912761FBED00C00A7F482 /* main.m */,
+				F528A39B1FD0672F004FEEC7 /* FLCTMessagePush.pch */,
 			);
 			path = OtherFile;
 			sourceTree = "<group>";
@@ -162,6 +208,10 @@
 		F5091A691FBFCA4100AA84F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F528A3941FD065C4004FEEC7 /* Manager */,
+				F528A3901FD05386004FEEC7 /* View */,
+				F528A38D1FCF0140004FEEC7 /* STMPLoginController.h */,
+				F528A38E1FCF0140004FEEC7 /* STMPLoginController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -169,6 +219,8 @@
 		F5091A6A1FBFEB8300AA84F3 /* Uitil */ = {
 			isa = PBXGroup;
 			children = (
+				F528A3B81FD25CD9004FEEC7 /* Common */,
+				F528A3A11FD06AA3004FEEC7 /* Crypto */,
 			);
 			path = Uitil;
 			sourceTree = "<group>";
@@ -192,6 +244,7 @@
 		F5091A8D1FC3342100AA84F3 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				F528A3CB1FD28D44004FEEC7 /* Model */,
 				F5091ABA1FC5CD7B00AA84F3 /* Manager */,
 				F5091AA21FC461BF00AA84F3 /* ViewModel */,
 				F5091AA11FC461B500AA84F3 /* View */,
@@ -255,13 +308,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		F5091AB51FC5ACE400AA84F3 /* Model */ = {
+		F5091AB51FC5ACE400AA84F3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				F5091ABE1FC65CDA00AA84F3 /* STMPCellViewModel.h */,
 				F5091ABF1FC65CDA00AA84F3 /* STMPCellViewModel.m */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F5091AB61FC5ACEB00AA84F3 /* Manager */ = {
@@ -269,6 +322,10 @@
 			children = (
 				F5091AB71FC5AF5A00AA84F3 /* STMPDataManager.h */,
 				F5091AB81FC5AF5A00AA84F3 /* STMPDataManager.m */,
+				F528A3CF1FD29350004FEEC7 /* STMPListDataManager.h */,
+				F528A3D01FD29350004FEEC7 /* STMPListDataManager.m */,
+				F528A3D51FD2CAD8004FEEC7 /* STNRequest+Init.h */,
+				F528A3D61FD2CAD8004FEEC7 /* STNRequest+Init.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -282,13 +339,93 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		F528A3901FD05386004FEEC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3911FD0543D004FEEC7 /* STMPLoginTextField.h */,
+				F528A3921FD0543D004FEEC7 /* STMPLoginTextField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F528A3941FD065C4004FEEC7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3981FD06661004FEEC7 /* STMPLoginManager.h */,
+				F528A3991FD06661004FEEC7 /* STMPLoginManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F528A3A11FD06AA3004FEEC7 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3A21FD06AC1004FEEC7 /* STMPCrypto.h */,
+				F528A3A31FD06B9A004FEEC7 /* NSString+Crypto.h */,
+				F528A3A41FD06B9A004FEEC7 /* NSString+Crypto.m */,
+				F528A3A61FD06C1C004FEEC7 /* NSDictionary+Crypto.h */,
+				F528A3A71FD06C1C004FEEC7 /* NSDictionary+Crypto.m */,
+				F528A3AD1FD2379A004FEEC7 /* NSData+Crypto.h */,
+				F528A3AE1FD2379A004FEEC7 /* NSData+Crypto.m */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		F528A3A91FD236B9004FEEC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3AA1FD236E2004FEEC7 /* STMPResponseModel.h */,
+				F528A3AB1FD236E2004FEEC7 /* STMPResponseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F528A3B01FD25BE9004FEEC7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3B11FD25C1E004FEEC7 /* STMPAccountManager.h */,
+				F528A3B21FD25C1E004FEEC7 /* STMPAccountManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F528A3B41FD25C3A004FEEC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3B51FD25C58004FEEC7 /* STMPAccountModel.h */,
+				F528A3B61FD25C58004FEEC7 /* STMPAccountModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F528A3B81FD25CD9004FEEC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3BF1FD26D8A004FEEC7 /* STMPCommon.h */,
+				F528A3BB1FD25D47004FEEC7 /* STMPCommonDefined.h */,
+				F528A3B91FD25D38004FEEC7 /* STMPCommonDefined.m */,
+				F528A3BC1FD26B82004FEEC7 /* STMPConstDefined.h */,
+				F528A3BD1FD26B82004FEEC7 /* STMPConstDefined.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F528A3CB1FD28D44004FEEC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F528A3CC1FD28D5A004FEEC7 /* STMPMessageModel.h */,
+				F528A3CD1FD28D5A004FEEC7 /* STMPMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F5D4BA561FBFC46A00A555D8 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				F5091A6A1FBFEB8300AA84F3 /* Uitil */,
 				F5D4BA591FBFC48E00A555D8 /* Module */,
-				F5D4BA581FBFC48600A555D8 /* Component */,
 				F5D4BA571FBFC47E00A555D8 /* Main */,
+				F5D4BA581FBFC48600A555D8 /* Component */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -296,6 +433,8 @@
 		F5D4BA571FBFC47E00A555D8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F528A3B41FD25C3A004FEEC7 /* Model */,
+				F528A3B01FD25BE9004FEEC7 /* Manager */,
 				F5091A571FBFC53400AA84F3 /* TabbarController */,
 			);
 			path = Main;
@@ -304,8 +443,9 @@
 		F5D4BA581FBFC48600A555D8 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F528A3A91FD236B9004FEEC7 /* Model */,
 				F5091AB61FC5ACEB00AA84F3 /* Manager */,
-				F5091AB51FC5ACE400AA84F3 /* Model */,
+				F5091AB51FC5ACE400AA84F3 /* ViewModel */,
 				F5091AA31FC4625000AA84F3 /* UIView */,
 			);
 			path = Component;
@@ -447,14 +587,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FLCTMessagePush/Pods-FLCTMessagePush-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/STNetWork/STNetWork.framework",
 				"${BUILT_PRODUCTS_DIR}/STOrigin/STOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STNetWork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
@@ -487,16 +631,30 @@
 			files = (
 				F5091AA71FC4627200AA84F3 /* STMPTableViewCell.m in Sources */,
 				F5091ABD1FC5CD9B00AA84F3 /* STMPMessageListDataManager.m in Sources */,
+				F528A3D71FD2CAD8004FEEC7 /* STNRequest+Init.m in Sources */,
+				F528A3AC1FD236E2004FEEC7 /* STMPResponseModel.m in Sources */,
 				F5091AC01FC65CDA00AA84F3 /* STMPCellViewModel.m in Sources */,
+				F528A3A81FD06C1C004FEEC7 /* NSDictionary+Crypto.m in Sources */,
+				F528A38F1FCF0140004FEEC7 /* STMPLoginController.m in Sources */,
 				F5091AAE1FC462D400AA84F3 /* STMPTableViewController.m in Sources */,
+				F528A3D11FD29350004FEEC7 /* STMPListDataManager.m in Sources */,
+				F528A3BA1FD25D38004FEEC7 /* STMPCommonDefined.m in Sources */,
+				F528A39A1FD06661004FEEC7 /* STMPLoginManager.m in Sources */,
 				F5091AB11FC462ED00AA84F3 /* STMPViewController.m in Sources */,
+				F528A3AF1FD2379A004FEEC7 /* NSData+Crypto.m in Sources */,
 				F5091AB91FC5AF5A00AA84F3 /* STMPDataManager.m in Sources */,
 				F5091AAA1FC4629400AA84F3 /* STMPMessageListCell.m in Sources */,
+				F528A3A51FD06B9A004FEEC7 /* NSString+Crypto.m in Sources */,
 				F5091AB41FC5AC9C00AA84F3 /* STMPMessageListCellViewModel.m in Sources */,
+				F528A3BE1FD26B82004FEEC7 /* STMPConstDefined.m in Sources */,
 				664912771FBED00C00A7F482 /* main.m in Sources */,
 				F5091A641FBFC70900AA84F3 /* STMPTabBarViewController.m in Sources */,
 				664912751FBECDF700A7F482 /* AppDelegate.m in Sources */,
 				F5091A9A1FC33B3300AA84F3 /* STMPMessageListController.m in Sources */,
+				F528A3B31FD25C1E004FEEC7 /* STMPAccountManager.m in Sources */,
+				F528A3CE1FD28D5A004FEEC7 /* STMPMessageModel.m in Sources */,
+				F528A3B71FD25C58004FEEC7 /* STMPAccountModel.m in Sources */,
+				F528A3931FD0543D004FEEC7 /* STMPLoginTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +801,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZEKMY4ZK97;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FLCTMessagePush/OtherFile/FLCTMessagePush.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FLCTMessagePush/OtherFile/FLCTMessagePush.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.maple.FLCTSMSNotice;
@@ -666,6 +826,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZEKMY4ZK97;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FLCTMessagePush/OtherFile/FLCTMessagePush.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/FLCTMessagePush/OtherFile/FLCTMessagePush.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.maple.FLCTSMSNotice;

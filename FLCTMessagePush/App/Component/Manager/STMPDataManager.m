@@ -7,6 +7,7 @@
 //
 
 #import "STMPDataManager.h"
+#import "STMPResponseModel.h"
 
 @interface STMPDataManager()
 
@@ -14,20 +15,5 @@
 
 @implementation STMPDataManager
 
-- (NSUInteger)numberOfSection {
-    return 0;
-}
-
-- (NSUInteger)numberOfRowsInSection:(NSUInteger)section {
-    return self.modelList.count;
-}
-
-- (id)modelAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
-}
-
-- (void)loadData {
-    
-}
 
 @end

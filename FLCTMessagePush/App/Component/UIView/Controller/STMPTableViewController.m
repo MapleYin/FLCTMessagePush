@@ -18,9 +18,13 @@
 - (instancetype)init {
     self = [super init];
     if(self) {
+        
+        _refreshControl = [[UIRefreshControl alloc] init];
+        
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.refreshControl = _refreshControl;
     }
     return self;
 }
@@ -30,12 +34,16 @@
     
     
     [self.view addSubview:self.tableView];
-    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
-- (STMPDataManager *)createDataManager {
-    return [STMPDataManager new];
+- (void)setRefreshControl:(UIRefreshControl *)refreshControl {
+    _refreshControl = refreshControl;
+    self.tableView.refreshControl = refreshControl;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;

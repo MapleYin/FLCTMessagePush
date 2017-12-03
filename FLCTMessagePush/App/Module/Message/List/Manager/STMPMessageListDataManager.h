@@ -6,12 +6,15 @@
 //  Copyright © 2017年 Maple. All rights reserved.
 //
 
-#import "STMPDataManager.h"
+#import "STMPListDataManager.h"
 
 @class STMPMessageListCellViewModel;
+@class STMPMessageModel;
 
-@interface STMPMessageListDataManager : STMPDataManager
+@interface STMPMessageListDataManager : STMPListDataManager
 
-- (STMPMessageListCellViewModel *)modelAtIndexPath:(NSIndexPath *)indexPath;
+- (STMPMessageModel *)modelAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)loadData:(void(^)(NSArray<STMPMessageModel *> *result, NSError *error))complete;
 
 @end

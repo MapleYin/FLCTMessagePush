@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface STMPDataManager : NSObject
 
-@property (nonatomic, strong) NSArray* modelList;
-
-- (NSUInteger)numberOfSection;
-- (NSUInteger)numberOfRowsInSection:(NSUInteger)section;
-- (id)modelAtIndexPath:(NSIndexPath *)indexPath;
-- (void)loadData;
-
+ 
 @end
+
+NS_ASSUME_NONNULL_END

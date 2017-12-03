@@ -12,5 +12,7 @@
 @interface STMPTableViewController : STMPViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+
 
 @end
