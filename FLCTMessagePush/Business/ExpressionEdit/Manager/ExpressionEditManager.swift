@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import MessageCommon
 
 class ExpressionEditManager {
     
     static let shared = ExpressionEditManager()
+    private let filterExpressionMananger = FilterExpressionManager()
     
     let kLastSelectedEditType = "kLastSelectedEditType"
+    var editListCachePath: String = {
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        return url?.appendingPathComponent("editInfoFile").path ?? ""
+    }()
     
     private let editTypeList: [ExpressionEditTypeModel]
     
@@ -34,6 +40,8 @@ class ExpressionEditManager {
 //            middelMode,
 //            seniorMode
 //        ]
+        
+        self.read()
     }
     
     
@@ -49,6 +57,46 @@ class ExpressionEditManager {
         }
     }
     
+    func remove(at index: Int) {
+        if index >= 0 && index < self.expressionList.count {
+            self.expressionList.remove(at: index)
+        }
+    }
+    
+    func add(model: ExpressionEditModel) {
+        self.expressionList.insert(model, at: 0)
+    }
+    
+    func save() {
+        if !NSKeyedArchiver.archiveRootObject(self.expressionList, toFile: self.editListCachePath) {
+            print("save error")
+        }
+        
+        self.converEditModel()
+    }
+    
+    func read() {
+        if let editList = NSKeyedUnarchiver.unarchiveObject(withFile: self.editListCachePath) as? [ExpressionEditModel] {
+            self.expressionList = editList
+        }
+    }
+    
+    func converEditModel() {
+        filterExpressionMananger.clear()
+        self.expressionList.forEach { (model) in
+            let checkType: FilterCheckType
+            if model.source == .message {
+                checkType = .message
+            } else {
+                checkType = .sender
+            }
+            let expression = model.expressionString()
+            filterExpressionMananger.add(expression: expression,
+                                         checkType: checkType,
+                                         contain: model.condition == .contain)
+        }
+        filterExpressionMananger.save()
+    }
 }
 
 

@@ -15,7 +15,13 @@ class ExpressionEditTextSetCellViewModel: ExpressionEditCellModelProtocol {
     let titleText: String
     var placeHolderString: String?
     
-    var valueText: String? = nil
+    var valueText: String? {
+        didSet {
+            self.didUpdateValue?(valueText)
+        }
+    }
+
+    var didUpdateValue: ((String?) -> Void)?
     
     init(titleText: String) {
         self.titleText = titleText

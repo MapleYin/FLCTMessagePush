@@ -14,9 +14,15 @@ class ExpressionEditSegmentSelectCellViewModle: ExpressionEditCellModelProtocol 
     
     let titleText: String
     let segmentTexts: [String]
-    let currentSelected: Int
+    var currentSelected: Int {
+        didSet {
+            self.didUpdateValue?(currentSelected)
+        }
+    }
     
-    let valueText: String? = nil
+    var didUpdateValue: ((Int?) -> Void)?
+    
+    var valueText: String? = nil
     
     init(titleText: String, segment: [String], defaultIndex: Int = 0) {
         self.titleText = titleText

@@ -11,6 +11,7 @@ import AsyncDisplayKit
 class ExpressionEditTextSetCellNode: ASCellNode, ExpressionEditCellProtocol {
 
     private let titleTextNode: ASTextNode = ASTextNode()
+    private var model: ExpressionEditTextSetCellViewModel?
     
     private let inputTextNode: ASDisplayNode = ASDisplayNode { () -> UIView in
         let textField = UITextField()
@@ -30,6 +31,8 @@ class ExpressionEditTextSetCellNode: ASCellNode, ExpressionEditCellProtocol {
     required convenience init(model: ExpressionEditTextSetCellViewModel) {
         self.init()
         
+        self.model = model
+        
         self.backgroundColor = UIColor.white
         self.selectionStyle = .none
         self.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
@@ -42,7 +45,9 @@ class ExpressionEditTextSetCellNode: ASCellNode, ExpressionEditCellProtocol {
             ])
         
         let textField = self.inputTextNode.view as! UITextField
+        textField.text = model.valueText
         textField.placeholder = model.placeHolderString
+        textField.delegate = self
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -60,5 +65,13 @@ class ExpressionEditTextSetCellNode: ASCellNode, ExpressionEditCellProtocol {
     override func didLoad() {
         super.didLoad()
         self.inputTextNode.becomeFirstResponder()
+    }
+}
+
+
+extension ExpressionEditTextSetCellNode: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.model?.valueText = textField.text
     }
 }

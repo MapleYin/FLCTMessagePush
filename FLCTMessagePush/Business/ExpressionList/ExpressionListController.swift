@@ -7,13 +7,12 @@
 //
 
 import AsyncDisplayKit
-import MessageCommon
 
 class ExpressionListController: ASViewController<ASTableNode> {
     
     let tableNode: ASTableNode
-    let filterExpressionMananger = FilterExpressionManager()
-    var currentEditModel: ExpressionEditModel?
+    var newEditModel: ExpressionEditModel?
+    var editModelIndexPath: IndexPath?
     
     init() {
         self.tableNode = ASTableNode(style: .plain)
@@ -51,8 +50,14 @@ class ExpressionListController: ASViewController<ASTableNode> {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let editModel = self.currentEditModel {
-            
+        if let editModel = self.newEditModel {
+            self.newEditModel = nil
+            ExpressionEditManager.shared.add(model: editModel)
+            let indexPath = IndexPath(row: 0, section: 0)
+            self.tableNode.insertRows(at: [indexPath], with: .automatic)
+        } else if let indexPath = self.editModelIndexPath {
+            self.editModelIndexPath = nil
+            self.tableNode.reloadRows(at: [indexPath], with: .automatic)
         }
     }
 }
@@ -60,12 +65,9 @@ class ExpressionListController: ASViewController<ASTableNode> {
 // MARK: - Method
 extension ExpressionListController {
     func createExpression() {
-        let juniorModeNode = ExpressionEditJuniorModeNode()
         let editModel = ExpressionEditModel()
-        let vc = ExpressionEditController(editNode: juniorModeNode, editModel: editModel)
-        let nav = ASNavigationController(rootViewController: vc)
-        self.present(nav, animated: true, completion: nil)
-        self.currentEditModel = editModel
+        self.newEditModel = editModel
+        self.edit(editModel: editModel)
     }
     
     func editList(isEditing: Bool) {
@@ -121,7 +123,7 @@ extension ExpressionListController {
                 return indexPath1.row > indexPath2.row
             })
             sortedIndexPathes.forEach({ (indexPath) in
-                
+                ExpressionEditManager.shared.remove(at: indexPath.row)
                 tableNode.deleteRows(at: [indexPath], with: .automatic)
             })
         }, completion: { (finished) in
@@ -131,8 +133,13 @@ extension ExpressionListController {
                 self.editList(isEditing: false)
             }
         })
-        
-        self.filterExpressionMananger.save()
+    }
+    
+    func edit(editModel: ExpressionEditModel) {
+        let juniorModeNode = ExpressionEditJuniorModeNode()
+        let vc = ExpressionEditController(editNode: juniorModeNode, editModel: editModel)
+        let nav = ASNavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
     }
 }
 
@@ -190,6 +197,10 @@ extension ExpressionListController: ASTableDelegate, ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         if !tableNode.view.isEditing {
             tableNode.deselectRow(at: indexPath, animated: true)
+            if let model = ExpressionEditManager.shared.modelAt(index: indexPath.row) {
+                self.editModelIndexPath = indexPath
+                self.edit(editModel: model)
+            }
         } else {
             self.itemSelectedStatusDidChanged(at: indexPath, selected: true)
         }
@@ -210,7 +221,7 @@ extension ExpressionListController: ASTableDelegate, ASTableDataSource {
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return false
     }
     
     func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {

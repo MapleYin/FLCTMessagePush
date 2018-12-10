@@ -54,21 +54,40 @@ extension ExpressionEditController {
         let titleSetModel = ExpressionEditTextSetCellViewModel(titleText: "描述")
         titleSetModel.placeHolderString = "规则名"
         titleSetModel.valueText = editModel.name
+        titleSetModel.didUpdateValue = { value in
+            if let value = value {
+                self.editModel.name = value
+            }
+        }
         settingCellData[0].append(titleSetModel)
         
         // source
         settingCellData.append([])
+        let sourceIndex = editModel.source == .message ? 0 : 1
         let sourceSelect = ExpressionEditSegmentSelectCellViewModle(titleText: "来源",
-                                                                    segment: ["内容","发信人"])
-        //        sourceSelect
+                                                                    segment: ["内容","发信人"],
+                                                                    defaultIndex: sourceIndex)
+        sourceSelect.didUpdateValue = { index in
+            self.editModel.source = index == 0 ? .message : .sender
+        }
         settingCellData[1].append(sourceSelect)
+        
+        
         // condition
-        settingCellData[1].append(ExpressionEditSegmentSelectCellViewModle(titleText: "条件",
-                                                                           segment: ["包含","不包含"]))
+        let conditionIndex = editModel.condition == .contain ? 0 : 1
+        let conditionSelect = ExpressionEditSegmentSelectCellViewModle(titleText: "条件",
+                                                                       segment: ["包含","不包含"],
+                                                                       defaultIndex: conditionIndex)
+        conditionSelect.didUpdateValue = { index in
+            self.editModel.condition = index == 0 ? .contain : .except
+        }
+        settingCellData[1].append(conditionSelect)
         
         settingCellData.append([])
+        
+        
         // text
-        let detailText = editModel.keywords[0..<min(10, editModel.keywords.count)].joined(separator: " ")
+        let detailText = editModel.keywords.joined(separator: " ")
         let keywordsCellModel = ExpressionEditTextDetailViewModel(titleText: "关键词", detailText: detailText)
         settingCellData[2].append(keywordsCellModel)
         

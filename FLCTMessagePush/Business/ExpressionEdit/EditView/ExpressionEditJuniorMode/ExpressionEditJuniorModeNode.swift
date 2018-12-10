@@ -11,7 +11,7 @@ import AsyncDisplayKit
 
 class ExpressionEditJuniorModeNode: ASTableNode {
     
-    let title = "添加规则"
+    let title = "编辑规则"
     
     var model: ExpressionEditModel
     

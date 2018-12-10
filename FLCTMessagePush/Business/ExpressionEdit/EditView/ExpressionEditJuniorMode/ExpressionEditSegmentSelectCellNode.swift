@@ -16,6 +16,7 @@ class ExpressionEditSegmentSelectCellNode: ASCellNode, ExpressionEditCellProtoco
         segment.apportionsSegmentWidthsByContent = true
         return segment
     }
+    private var model: ExpressionEditSegmentSelectCellViewModle?
     
     required convenience init(modelProtocol: ExpressionEditCellModelProtocol) {
         if let model = modelProtocol as? ExpressionEditSegmentSelectCellViewModle {
@@ -27,6 +28,8 @@ class ExpressionEditSegmentSelectCellNode: ASCellNode, ExpressionEditCellProtoco
     
     convenience init(model: ExpressionEditSegmentSelectCellViewModle) {
         self.init()
+        
+        self.model = model
         
         self.backgroundColor = UIColor.white
         self.selectionStyle = .none
@@ -45,6 +48,7 @@ class ExpressionEditSegmentSelectCellNode: ASCellNode, ExpressionEditCellProtoco
             segment.insertSegment(withTitle: title, at: segment.numberOfSegments, animated: false)
         }
         segment.selectedSegmentIndex = model.currentSelected
+        segment.addTarget(self, action: #selector(segmentValueChanged(target:)), for: .valueChanged)
         
         self.segmentNode.style.minSize = segment.intrinsicContentSize
     }
@@ -58,4 +62,10 @@ class ExpressionEditSegmentSelectCellNode: ASCellNode, ExpressionEditCellProtoco
         return insetLayoutSpec
     }
     
+}
+
+extension ExpressionEditSegmentSelectCellNode {
+    @objc func segmentValueChanged(target: UISegmentedControl) {
+        self.model?.currentSelected = target.selectedSegmentIndex
+    }
 }

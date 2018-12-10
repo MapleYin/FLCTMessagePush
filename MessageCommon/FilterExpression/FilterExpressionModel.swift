@@ -21,8 +21,11 @@ open class FilterExpressionModel: NSObject, NSCoding {
     
     public let checkType : FilterCheckType
     
-    public init?(expression: String, checkType: FilterCheckType) {
+    private let contain : Bool
+    
+    public init?(expression: String, checkType: FilterCheckType, contain: Bool = true) {
         self.checkType = checkType
+        self.contain = contain
         if let exp = try? NSRegularExpression(pattern: expression) {
             self.expressionRegular = exp
         } else {
@@ -33,14 +36,21 @@ open class FilterExpressionModel: NSObject, NSCoding {
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(self.expressionRegular, forKey: "expressionRegular")
         aCoder.encode(self.checkType.rawValue, forKey: "checkType")
+        aCoder.encode(self.contain, forKey: "contain")
     }
     
     public required init?(coder aDecoder: NSCoder) {
         self.expressionRegular = aDecoder.decodeObject(forKey: "expressionRegular") as? NSRegularExpression ?? FilterExpressionModel.defaultExpression
         self.checkType = FilterCheckType(rawValue: aDecoder.decodeObject(forKey: "checkType") as? String ?? "") ?? .message
+        self.contain = aDecoder.decodeObject(forKey: "contain") as? Bool ?? true
     }
     
     public func test(_ str: String) -> Bool {
-        return self.expressionRegular.numberOfMatches(in: str, options: [], range: NSRange(location: 0, length: str.count)) != 0
+        let match = self.expressionRegular.numberOfMatches(in: str, options: [], range: NSRange(location: 0, length: str.count)) != 0
+        if self.contain {
+            return match
+        } else {
+            return !match
+        }
     }
 }

@@ -38,7 +38,7 @@ class ExpressionEditTextDetailNode: ASCellNode, ExpressionEditCellProtocol {
             ])
         
         self.detailTextNode.attributedText = NSAttributedString(string: model.detailText, attributes: [
-            .font : UIFont.systemFont(ofSize: 17),
+            .font : UIFont.systemFont(ofSize: 14),
             .foregroundColor : UIColor.metaText
             ])
     }
@@ -46,9 +46,15 @@ class ExpressionEditTextDetailNode: ASCellNode, ExpressionEditCellProtocol {
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
-        let firstStackLayoutSpec = ASStackLayoutSpec(direction: .horizontal, spacing: 0, justifyContent: .spaceBetween, alignItems: .center, children: [self.titleTextNode, self.detailTextNode])
+        var elements: [ASLayoutElement] = [self.titleTextNode]
+        if let attr = self.detailTextNode.attributedText, attr.length > 0 {
+            elements.append(self.detailTextNode)
+        }
         
-        let secStackLayoutSpec = ASStackLayoutSpec(direction: .vertical, spacing: 15, justifyContent: .start, alignItems: .stretch, children: [firstStackLayoutSpec])
+        let firstStackLayoutSpec = ASStackLayoutSpec(direction: .vertical, spacing: 10, justifyContent: .spaceBetween, alignItems: .start, children: elements)
+        self.detailTextNode.style.flexShrink = 0
+        
+        let secStackLayoutSpec = ASStackLayoutSpec(direction: .vertical, spacing: 0, justifyContent: .start, alignItems: .stretch, children: [firstStackLayoutSpec])
         
         let insetLayoutSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15), child: secStackLayoutSpec)
         

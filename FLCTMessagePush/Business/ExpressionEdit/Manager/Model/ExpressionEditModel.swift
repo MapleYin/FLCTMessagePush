@@ -43,5 +43,7 @@ class ExpressionEditModel: NSObject, NSCoding {
         self.keywords = aDecoder.decodeObject(forKey: "keywords") as? [String] ?? []
     }
     
-    
+    func expressionString() -> String {
+        return self.keywords.joined(separator: "|")
+    }
 }

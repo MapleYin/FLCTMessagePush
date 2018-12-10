@@ -13,39 +13,45 @@ public class FilterExpressionManager: NSObject {
     
     let configFilePath = "configFile"
     let fileManager = GroupFileManager()
-    let fileUpdateQueue = OperationQueue()
+
+    let isExtention: Bool
+    
+    let userDefaults = UserDefaults(suiteName: "group.im.maple.app")
     
     public private(set) var senderExpressionList: [FilterExpressionModel] = []
     public private(set) var messageExpressionList: [FilterExpressionModel] = []
     
-    public override init() {
+    public init(isExtention: Bool = false) {
+        self.isExtention = isExtention
         super.init()
         
         self.readData()
-        NSFileCoordinator.addFilePresenter(self)
     }
     
     func readData() {
-        if let url = self.presentedItemURL,
-        let list = NSKeyedUnarchiver.unarchiveObject(withFile: url.path) as? [String:[FilterExpressionModel]] {
+        if let data = self.userDefaults?.data(forKey: "rule"),
+            let list = NSKeyedUnarchiver.unarchiveObject(with: data) as? [String : [FilterExpressionModel]] {
             self.senderExpressionList = list["user"] ?? []
             self.messageExpressionList = list["content"] ?? []
         }
     }
     
     public func save() {
-        if let url = self.fileManager.groupPath(with: self.configFilePath) {
-            let list = [
-                "user" : self.senderExpressionList,
-                "content" : self.messageExpressionList
-            ]
-            NSKeyedArchiver.archiveRootObject(list, toFile: url.path)
-        }
+        let list = [
+            "user" : self.senderExpressionList,
+            "content" : self.messageExpressionList
+        ]
+        
+        let data = NSKeyedArchiver.archivedData(withRootObject: list)
+        
+        self.userDefaults?.set(data, forKey: "rule")
     }
     
     @discardableResult
-    public func add(expression: String, checkType: FilterCheckType) -> Bool {
-        if let expression = FilterExpressionModel(expression: expression, checkType: checkType) {
+    public func add(expression: String, checkType: FilterCheckType, contain: Bool = true) -> Bool {
+        if let expression = FilterExpressionModel(expression: expression,
+                                                  checkType: checkType,
+                                                  contain: contain) {
             switch checkType {
             case .message:
                 self.messageExpressionList.append(expression)
@@ -65,6 +71,7 @@ public class FilterExpressionManager: NSObject {
     
     
     public func needFilter(text: String, checkType: FilterCheckType) -> Bool {
+        self.userDefaults?.set(text, forKey: "test")
         if checkType == .message {
             if self.messageExpressionList.first(where: { (expModel) -> Bool in
                 return expModel.test(text)
@@ -80,21 +87,5 @@ public class FilterExpressionManager: NSObject {
             }
             return false
         }
-    }
-}
-
-
-
-extension FilterExpressionManager: NSFilePresenter {
-    public var presentedItemURL: URL? {
-        return self.fileManager.groupPath(with: self.configFilePath)
-    }
-    
-    public var presentedItemOperationQueue: OperationQueue {
-        return self.fileUpdateQueue
-    }
-    
-    public func presentedItemDidChange() {
-        self.readData()
     }
 }

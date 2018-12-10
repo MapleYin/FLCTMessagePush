@@ -10,7 +10,7 @@ import IdentityLookup
 import MessageCommon
 
 final class MessageFilterExtension: ILMessageFilterExtension {
-    let filterExpressionManager = FilterExpressionManager()
+    
 }
 
 extension MessageFilterExtension: ILMessageFilterQueryHandling {
@@ -49,14 +49,16 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         // Replace with logic to perform offline check whether to filter first (if possible).
         
+        let filterExpressionManager = FilterExpressionManager(isExtention: true)
+        
         if let sender = queryRequest.sender {
-            if self.filterExpressionManager.needFilter(text: sender, checkType: .sender) {
+            if filterExpressionManager.needFilter(text: sender, checkType: .sender) {
                 return .filter
             }
         }
         
         if let meesage = queryRequest.messageBody {
-            if self.filterExpressionManager.needFilter(text: meesage, checkType: .message) {
+            if filterExpressionManager.needFilter(text: meesage, checkType: .message) {
                 return .filter
             }
         }
