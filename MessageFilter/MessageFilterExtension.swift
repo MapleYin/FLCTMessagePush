@@ -1,17 +1,15 @@
 //
 //  MessageFilterExtension.swift
-//  Filter
+//  MessageFilter
 //
-//  Created by Mapleiny on 2018/9/16.
-//  Copyright © 2018年 Maple. All rights reserved.
+//  Created by Maple Yin on 2018/12/10.
+//  Copyright © 2018 Maple. All rights reserved.
 //
 
 import IdentityLookup
 import MessageCommon
 
-final class MessageFilterExtension: ILMessageFilterExtension {
-    
-}
+final class MessageFilterExtension: ILMessageFilterExtension {}
 
 extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
@@ -48,7 +46,6 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         // Replace with logic to perform offline check whether to filter first (if possible).
-        
         let filterExpressionManager = FilterExpressionManager(isExtention: true)
         
         if let sender = queryRequest.sender {
@@ -62,8 +59,6 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
                 return .filter
             }
         }
-        
-        
         return .none
     }
     

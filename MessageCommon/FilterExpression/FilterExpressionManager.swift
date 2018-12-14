@@ -23,8 +23,7 @@ public class FilterExpressionManager: NSObject {
     
     public init(isExtention: Bool = false) {
         self.isExtention = isExtention
-        super.init()
-        
+        super.init()        
         self.readData()
     }
     
